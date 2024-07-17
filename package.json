@@ -1,0 +1,32 @@
+{
+  "name": "auxo-tech-test",
+  "version": "1.0.0",
+  "description": "Tech demo for Auxo",
+  "main": "index.js",
+  "scripts": {
+    "clean": "cross-env npx tsx clean-results.ts",
+    "test": "npm run clean && cross-env ENV=dev HEADLESS=true npx cucumber-js test",
+    "wip": "npm run clean && cross-env ENV=dev HEADLESS=false npx cucumber-js test -p wip",
+    "demo": "npm run clean && cross-env ENV=dev HEADLESS=false npx cucumber-js test"
+  },
+  "keywords": [
+    "cucumber",
+    "playwright"
+  ],
+  "author": "Mark Rodgers",
+  "license": "MIT",
+  "dependencies": {
+    "@cucumber/cucumber": "^10.8.0",
+    "@playwright/test": "^1.45.2",
+    "@types/fs-extra": "^11.0.4",
+    "@types/luxon": "^3.4.2",
+    "@types/node": "^20.14.11",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.5",
+    "fs-extra": "^11.2.0",
+    "luxon": "^3.4.4",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.16.2",
+    "typescript": "^5.5.3"
+  }
+}
