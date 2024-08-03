@@ -14,7 +14,7 @@ async function clickContacts(): Promise<void> {
  */
 export async function openCustomerPage(): Promise<void> {
   const contactsOptions = new ContactsOptions(page)
-  clickContacts()
+  await clickContacts()
   await contactsOptions.customers.click()
 }
 
@@ -23,6 +23,6 @@ export async function openCustomerPage(): Promise<void> {
  */
 export async function openVehiclesPage(): Promise<void> {
   const contactsOptions = new ContactsOptions(page)
-  clickContacts()
+  await clickContacts()
   await contactsOptions.vehicles.click()
 }
